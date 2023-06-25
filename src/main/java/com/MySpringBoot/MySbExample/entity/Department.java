@@ -4,13 +4,20 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Data;
+
 
 @Entity
 public class Department
 {
-    @Id
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
     String name;
@@ -40,13 +47,13 @@ public class Department
         this.email = email;
     }
 
-    public long getId() {
+   /* public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+   // public void setId(int id) {
         this.id = id;
-    }
+    }*/
 
     public String getName() {
         return name;

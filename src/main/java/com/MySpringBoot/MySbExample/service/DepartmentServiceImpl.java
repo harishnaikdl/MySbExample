@@ -54,7 +54,6 @@ private DepartmentRepository departmentRepository;
             depDB.setEmail(department.getEmail());
 
         }
-
         return departmentRepository.save(depDB);
     }
 }
